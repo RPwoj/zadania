@@ -1,0 +1,136 @@
+html {
+    font-size: 18px;
+}
+
+.container {
+    max-width:  800px;
+    margin: 2rem auto;
+}
+
+
+
+/*  */
+
+.calendar-days-names,
+.calendar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / 7);
+    padding: .75rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.day:nth-child(-n + 7) {
+    border-top: 1px solid #000000;
+}
+
+.day:nth-child(7n) {
+    border-right: 1px solid #000000;
+    background: #ff3131;
+    color: #ffffff;
+}
+
+.day:nth-last-child(7):not(.day-name) {
+    border-bottom-left-radius: 5px;
+}
+
+.day:nth-last-child(1):not(.day-name) {
+    border-bottom-right-radius: 5px;
+}
+
+.day-name:nth-last-child(7) {
+    border-top-left-radius: 5px;
+}
+
+.day-name:nth-last-child(1) {
+    border-top-right-radius: 5px;
+}
+
+.next-month-day {
+    background: #dbdada !important;
+    color: #f1f1f1;
+}
+
+.day-name {
+    padding: .5rem;
+    aspect-ratio: auto;
+    border-bottom: 0;
+    font-size: 1.5rem;
+    background: #575757;
+    color: #ffffff;
+}
+
+
+
+/*  */
+
+.month-holder,
+.year-holder {
+    font-size: 3rem;
+}
+
+.calendar-heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+
+
+/*  */
+
+.input-holder {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 0.3rem;
+}
+
+.input-month,
+.input-year,
+.generate-btn {
+    padding: 0.25rem;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.generate-btn {
+    cursor: pointer;
+    transition: all .2s ease-out;
+    background: #dbdada;
+}
+
+.generate-btn:hover {
+    background: #575757 !important;
+    color: #ffffff;
+} 
+
+
+
+/*  */
+
+@media (max-width: 800px) {
+    .day {
+        font-size: 1.5rem;
+    }
+
+    .day-name {
+        font-size: 1rem;
+    }
+
+    .calendar-heading * {
+        font-size: 2rem;
+    }
+}

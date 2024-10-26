@@ -1,0 +1,68 @@
+A.
+
+Jest to błąd bazy danych PostgreSQL mówiący, o tym że dana tabela nie istnieje.
+
+Możliwe przyczyny:
+1. Źle sformułowane zapytanie odnoszące się do nieistniejącej tabeli.
+2. Brak tabeli o podanej nazwie w bazie danych.
+
+Możliwości naprawy:
+1. Sprawdzić poprawność nazwy tabeli w zapytaniu pod kątem literówek, wielkości znaków.
+2. Sprawdzić czy istnieje tabela do której odnosi się zapytanie.
+
+
+
+------------------------------
+B.
+
+Błąd mówi o tym, że użytkownik próbuje wystawic dokument z datą nieobejmującą okresu zatrudnienia danej osoby. 
+Np. Chce wystawić wniosek dla pana Marka na 15.10.2023 a pan Marek jest zatrudniony od 15.11.2023.
+
+Możliwości wystąpienia problemu:
+1. Błędnie podana data wystawienia wniosku.
+2. Błędnie wprowadzona data rozpoczęcia / zakończenia zatrudnienia.
+
+Możliwości rozwiązania problemu:
+1. Sprawdzenie czy data wystawienia wniosku jest poprawna.
+2. Sprawdzenie czy data zatrudnienia się zgadza ze stanem faktycznym.
+
+
+
+---------------------------------
+C.
+
+Jest to błąd z poziomu bazy danych. 
+
+Przyczyna:
+1. Dana kolumna w tabeli przyjmuje tylko wartości liczbowe. Użytkownik próbuje wprowadzić wartość zawierającą literę "B".
+
+Możliwości rozwiązania
+1. Poprawne wprowadzenie danych - liczba
+
+
+
+----------------------------------
+D.
+
+Ten komunikat wygląda bardziej na log (informację o danej akcji) niż błąd. 
+Musiałbym zobaczyć poprzednie logi żeby żeby poznać kontekst. 
+Na chwilę obecną mogę wynioskowac tyle że jest to informacja która mówi o tym że nastąpił eksport danych do systemu sage.
+
+
+
+--------------------------
+E.
+
+Bląd oznacza że strona nie może załadować elementu. Ten błąd może mieć wiele przyczyn.
+
+Możliwe przyczyny:
+1. Nie ma danego pliku na serwerze.
+2. Plik na serwerze do którego odwołuje się kod zmienił swoją lokalizację.
+3. Błędnie podana nazwa pliku w kodzie.
+4. Problem z CORS (Cross-Origin Resource Sharing) - brak odpowiednich nagłówków po stronie serwera.
+
+Rozwiązania:
+1. Sprawdzić czy plik znajduje się na serwerze.
+2. Sprawdzić czy podana ścieżka do pliku się nie zmieniła.
+3. Sprawdzić czy nazwa pliku podana w kodzie się zgadza.
+4. Dodanie odpowiednich nagłówków po stronie serwera.

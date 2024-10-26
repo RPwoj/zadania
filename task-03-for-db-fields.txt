@@ -1,0 +1,12 @@
+Dla osoby fizycznej:
+email       - varchar - not null - unique   
+username    - varchar 
+birth_date  - date
+is_verified - bool    - not null 
+
+Dla firmy:
+company_name    - varchar - not null
+company_address - varchar - not null
+email           - varchar - not null - unique   
+nip             - varchar - not null - unique
+is_verified     - bool    - not null 

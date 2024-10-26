@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalendarz</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="input-holder">
+                <select name="month" class="input-month">
+                    <option value="1">Styczeń</option>
+                    <option value="2">Luty</option>
+                    <option value="3">Marzec</option>
+                    <option value="4">Kwiecień</option>
+                    <option value="5">Maj</option>
+                    <option value="6">Czerwiec</option>
+                    <option value="7">Lipiec</option>
+                    <option value="8">Sierpień</option>
+                    <option value="9">Wrzesień</option>
+                    <option value="10">Październik</option>
+                    <option value="11">Listopad</option>
+                    <option value="12">Grudzień</option>
+                </select>
+                <input name="year" class="input-year" type="number" value="2024"></input>
+                <button class="generate-btn">Wygeneruj</button>
+            </div>
+            <div class="calendar-holder">
+                <div class="calendar-heading">
+                    <span class="month-holder"></span>
+                    <span class="year-holder"></span>
+                </div>
+                <div class="calendar-days-names">
+                    <span class="day day-name">Pn</span>
+                    <span class="day day-name">Wt</span>
+                    <span class="day day-name">Śr</span>
+                    <span class="day day-name">Cz</span>
+                    <span class="day day-name">Pt</span>
+                    <span class="day day-name">So</span>
+                    <span class="day day-name">N</span>
+                </div>
+                <div class="calendar"></div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="main.js"></script>
+</body>
+</html>
